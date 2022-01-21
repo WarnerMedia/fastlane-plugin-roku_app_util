@@ -1,0 +1,28 @@
+lane :test do
+  roku_dev_server_check(
+    dev_target: "192.168.87.201" # or set environment variable ROKUAPPUTIL_DEV_TARGET
+  )
+
+  roku_app_install(
+    dev_target: "192.168.87.201",  # or set environment variable ROKUAPPUTIL_DEV_TARGET
+    dev_user: "rokudev",           # or set environment variable ROKUAPPUTIL_DEV_USER
+    dev_pass: "pass",              # or set environment variable ROKUAPPUTIL_DEV_PASS
+    zip_path: "/path/to/zip"       # or set environment variable ROKUAPPUTIL_ZIP_PATH
+  )
+
+  roku_app_uninstall(
+    dev_target: "192.168.87.201", # or set environment variable ROKUAPPUTIL_DEV_TARGET
+    dev_user: "rokudev",          # or set environment variable ROKUAPPUTIL_DEV_USER
+    dev_pass: "pass"              # or set environment variable ROKUAPPUTIL_DEV_PASS
+  )
+
+  roku_app_package(
+    dev_target: "192.168.87.201", # or set environment variable ROKUAPPUTIL_DEV_TARGET
+    dev_user: "rokudev",          # or set environment variable ROKUAPPUTIL_DEV_USER
+    dev_pass: "pass",             # or set environment variable ROKUAPPUTIL_DEV_PASS
+    zip_path: "/path/to/zip",     # or set environment variable ROKUAPPUTIL_ZIP_PATH
+    sign_key: "secret",           # or set environment variable ROKUAPPUTIL_SIGN_KEY
+    app_name: "Your Snazzy App",  # or set environment variable ROKUAPPUTIL_APP_NAME
+    app_version: "1.2.3"          # or set environment variable ROKUAPPUTIL_APP_VERSION
+  )
+end
