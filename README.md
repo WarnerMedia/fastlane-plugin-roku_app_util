@@ -1,4 +1,4 @@
-# roku_app_util plugin
+# Fastlane roku_app_util plugin
 
 [![Test](https://github.com/WarnerMedia/fastlane-plugin-roku_app_util/actions/workflows/test.yml/badge.svg?branch=main)](https://github.com/WarnerMedia/fastlane-plugin-roku_app_util/actions/workflows/test.yml)
 <!-- [![fastlane Plugin Badge](https://rawcdn.githack.com/fastlane/fastlane/master/fastlane/assets/plugin-badge.svg)](https://rubygems.org/gems/fastlane-plugin-roku_app_util) -->
