@@ -123,6 +123,8 @@ module Fastlane
         app_name = params[:app_name]
         # application version
         app_version = params[:app_version]
+        # pkg_output_path: default to current folder        
+        pkg_output_path = params[:pkg_output_path]
 
         user_pass = "#{user}:#{pass}"
         app_name_version = "#{app_name}/#{app_version}"
@@ -152,8 +154,8 @@ module Fastlane
 
         # Use a combination of the app name & version for the output package file name
         output_package_file = "#{app_name}_#{app_version}.pkg".gsub(' ', '_')
-        # Head up one directory level
-        Dir.chdir("..") do
+        # download and rename package to pkg_output_path
+        Dir.chdir(pkg_output_path) do
           `curl --user #{user_pass} --digest --silent --show-error --output #{output_package_file} http://#{target}/pkgs/#{package_name}`
           # Check exit code
           if $?.exitstatus != 0

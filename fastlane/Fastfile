@@ -24,5 +24,6 @@ lane :test do
     sign_key: "secret",           # or set environment variable ROKUAPPUTIL_SIGN_KEY
     app_name: "Your Snazzy App",  # or set environment variable ROKUAPPUTIL_APP_NAME
     app_version: "1.2.3"          # or set environment variable ROKUAPPUTIL_APP_VERSION
+    pkg_output_path: "/path/to/pkg/target/location"          # or set environment variable ROKUAPPUTIL_APP_VERSION
   )
 end
