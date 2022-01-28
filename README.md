@@ -71,6 +71,7 @@ Key  | Environment Variable Equivalent | Description | Required?
 `sign_key`    | `ROKUAPPUTIL_SIGN_KEY`   | Roku signing key | YES
 `app_name`    | `ROKUAPPUTIL_APP_NAME`   | Roku application name | YES
 `app_version` | `ROKUAPPUTIL_APP_VERSION`| Roku application version | YES
+`pkg_output_path` | `ROKUAPPUTIL_PKG_OUTPUT_PATH`| Roku application PKG path | NO - Default value: `./`
 
 ## Example
 

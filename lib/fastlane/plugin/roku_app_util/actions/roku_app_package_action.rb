@@ -71,7 +71,13 @@ module Fastlane
                                   env_name: "ROKUAPPUTIL_APP_VERSION",
                                description: "Roku application version",
                                   optional: true,
-                                      type: String)
+                                      type: String),
+          FastlaneCore::ConfigItem.new(key: :pkg_output_path,
+                                  env_name: "ROKUAPPUTIL_PKG_OUTPUT_PATH",
+                               description: "Output path for pkg",
+                                  optional: true,
+                                      type: String,
+                                      default_value: "./")
         ]
       end
 
