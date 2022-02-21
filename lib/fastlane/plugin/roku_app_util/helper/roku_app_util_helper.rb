@@ -123,7 +123,7 @@ module Fastlane
         app_name = params[:app_name]
         # application version
         app_version = params[:app_version]
-        # pkg_output_path: default to current folder        
+        # pkg_output_path: default to current folder
         pkg_output_path = params[:pkg_output_path]
 
         user_pass = "#{user}:#{pass}"
