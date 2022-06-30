@@ -17,6 +17,7 @@ Fastlane plugin for Roku app automation. All actions require a Roku dev server o
 
 ### Available actions
 * [`roku_dev_server_check`](#action-roku_dev_server_check) : Checks Roku dev server
+* [`roku_dev_server_rekey`](#action-roku_dev_server_rekey) : Rekeys the dev server to the provided signed package
 * [`roku_app_install`](#action-roku_app_install) : Installs the app as a dev channel on a Roku target device
 * [`roku_app_uninstall`](#action-roku_app_uninstall) : Uninstalls any apps/dev channels on a Roku target device
 * [`roku_app_package`](#action-roku_app_package) : Creates Roku package from application sources
@@ -30,6 +31,20 @@ Fastlane plugin for Roku app automation. All actions require a Roku dev server o
 Key  | Environment Variable Equivalent | Description | Required?
 ------------- | ------------- | ------------- | -------------
 `dev_target`  | `ROKUAPPUTIL_DEV_TARGET` | The IP of the Roku dev target | YES
+
+#### Action: `roku_dev_server_rekey`
+
+##### Description: Rekeys the dev server to the provided signed package
+
+##### Parameters:
+
+Key  | Environment Variable Equivalent | Description | Required?
+------------- | ------------- | ------------- | -------------
+`dev_target`  | `ROKUAPPUTIL_DEV_TARGET` | The IP of the Roku dev target | YES
+`dev_user`    | `ROKUAPPUTIL_DEV_USER`   | Roku development username | NO - Default value: `rokudev`
+`dev_pass`    | `ROKUAPPUTIL_DEV_PASS`   | Roku development password | YES
+`sign_key`    | `ROKUAPPUTIL_SIGN_KEY`   | Roku signing key | YES
+`app_path`    | `ROKUAPPUTIL_APP_PATH`   | Roku signed application file path | YES
 
 #### Action: `roku_app_install`
 
