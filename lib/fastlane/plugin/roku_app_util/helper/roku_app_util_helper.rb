@@ -208,8 +208,6 @@ module Fastlane
         unless result.include?("Success")
           UI.shell_error!("Error from Roku: #{result}")
         end
-
-        UI.success("Roku device rekeyed")
       end
 
 
