@@ -1,6 +1,7 @@
 # Fastlane `roku_app_util` plugin
 
 [![fastlane Plugin Badge](https://rawcdn.githack.com/fastlane/fastlane/master/fastlane/assets/plugin-badge.svg)](https://rubygems.org/gems/fastlane-plugin-roku_app_util)
+[![Gem Version](https://badge.fury.io/rb/fastlane-plugin-roku_app_util.svg)](https://badge.fury.io/rb/fastlane-plugin-roku_app_util)
 [![Test](https://github.com/WarnerMedia/fastlane-plugin-roku_app_util/actions/workflows/test.yml/badge.svg?branch=master)](https://github.com/WarnerMedia/fastlane-plugin-roku_app_util/actions/workflows/test.yml)
 
 ## Getting Started
@@ -9,7 +10,7 @@ This project is a [_fastlane_](https://github.com/fastlane/fastlane) plugin. To 
 
 `fastlane add_plugin roku_app_util`
 
-__If the command prompts you with an option, select Option 3: RubyGems.org.__
+_If the command prompts you with an option, select Option 3: RubyGems.org._
 
 ## About roku_app_util
 
