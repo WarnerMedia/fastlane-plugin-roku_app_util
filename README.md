@@ -7,9 +7,9 @@
 
 This project is a [_fastlane_](https://github.com/fastlane/fastlane) plugin. To get started with `fastlane-plugin-roku_app_util`, add it to your project by running:
 
-1. `bundle exec fastlane add_plugin roku_app_util`
-2. When prompted enter option `1` for providing a **Git URL**
-3. Enter the URL for this repo: `https://github.com/WarnerMedia/fastlane-plugin-roku_app_util`
+`fastlane add_plugin roku_app_util`
+
+__If the command prompts you with an option, select Option 3: RubyGems.org.__
 
 ## About roku_app_util
 
