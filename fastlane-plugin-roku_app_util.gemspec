@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.email         = 'onyx.mueller@warnermedia.com'
 
   spec.summary       = 'Fastlane plugin for Roku app utility.'
-  # spec.homepage      = "https://github.com/<GITHUB_USERNAME>/fastlane-plugin-roku_app_util"
+  spec.homepage      = "https://github.com/WarnerMedia/fastlane-plugin-roku_app_util"
   spec.license       = "MIT"
 
   spec.files         = Dir["lib/**/*"] + %w(README.md LICENSE)
