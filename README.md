@@ -2,7 +2,6 @@
 
 [![fastlane Plugin Badge](https://rawcdn.githack.com/fastlane/fastlane/master/fastlane/assets/plugin-badge.svg)](https://rubygems.org/gems/fastlane-plugin-roku_app_util)
 [![Gem Version](https://badge.fury.io/rb/fastlane-plugin-roku_app_util.svg)](https://badge.fury.io/rb/fastlane-plugin-roku_app_util)
-[![Test](https://github.com/WarnerMedia/fastlane-plugin-roku_app_util/actions/workflows/test.yml/badge.svg?branch=master)](https://github.com/WarnerMedia/fastlane-plugin-roku_app_util/actions/workflows/test.yml)
 
 ## Getting Started
 
