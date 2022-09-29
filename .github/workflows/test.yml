@@ -19,9 +19,13 @@ jobs:
           ruby-version: 2.7
           bundler-cache: true # runs 'bundle install' and caches installed gems automatically
 
-      # Run static analysis with Rubocop
-      - name: Run Rubocop
+      # Run linter with RuboCop
+      - name: Run RuboCop
         run: bundle exec rubocop
+
+      # Run tests with RSpec
+      - name: Run RSpec
+        run: bundle exec rspec
 
       # Upload test results
       - name: Upload Artifact
