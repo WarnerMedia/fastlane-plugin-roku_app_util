@@ -62,7 +62,7 @@ module Fastlane
             description: 'Roku signing key',
             optional: true,
             type: String
-          ),
+          )
         ]
       end
 
