@@ -1,3 +1,6 @@
+# MacOS noise
+.DS_Store
+
 *.gem
 Gemfile.lock
 
