@@ -210,7 +210,6 @@ module Fastlane
         end
       end
 
-
       # A helper method to check if all the necessary parameters are set
       # params: An array containing all the parameters to check
       # keys: An array of keys to use in params
