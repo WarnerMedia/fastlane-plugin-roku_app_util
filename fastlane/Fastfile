@@ -3,6 +3,14 @@ lane :test do
     dev_target: "192.168.87.201" # or set environment variable ROKUAPPUTIL_DEV_TARGET
   )
 
+  roku_dev_server_rekey(
+    dev_target: "192.168.87.201",   # or set environment variable ROKUAPPUTIL_DEV_TARGET
+    dev_user: "rokudev",            # or set environment variable ROKUAPPUTIL_DEV_USER
+    dev_pass: "pass",               # or set environment variable ROKUAPPUTIL_DEV_PASS
+    sign_key: "secret",             # or set environment variable ROKUAPPUTIL_SIGN_KEY
+    app_path: "signed.pkg"          # or set environment variable ROKUAPPUTIL_APP_PATH
+  )
+
   roku_app_install(
     dev_target: "192.168.87.201",  # or set environment variable ROKUAPPUTIL_DEV_TARGET
     dev_user: "rokudev",           # or set environment variable ROKUAPPUTIL_DEV_USER

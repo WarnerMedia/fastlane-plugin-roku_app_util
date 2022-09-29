@@ -171,6 +171,46 @@ module Fastlane
         return File.expand_path(output_package_file)
       end
 
+      def self.roku_app_rekey(params)
+        validate_params(params, [:dev_target, :dev_user, :dev_pass, :sign_key, :app_path])
+
+        target = params[:dev_target]
+        user = params[:dev_user]
+        pass = params[:dev_pass]
+        sign_key = params[:sign_key]
+        app_path = params[:app_path]
+        user_pass = "#{user}:#{pass}"
+        current_time = DateTime.now.strftime('%Q')
+
+        cmd = ['curl']
+        cmd << "--user #{user_pass}"
+        cmd << "--digest"
+        cmd << "--silent"
+        cmd << "show-error"
+        cmd << "-F mysubmit=Rekey"
+        cmd << "-F passwd=#{sign_key}"
+        cmd << "-F archive=@#{app_path}"
+        cmd << "-F pkg_time=#{current_time}"
+        cmd << "http://#{target}/plugin_inspect"
+        cmd = cmd.join(' ')
+
+        response = `#{cmd}`
+
+        # Check exit code
+        if $?.exitstatus != 0
+          UI.shell_error!("Curl exit code #{$?.exitstatus}. See URL for meaning: https://everything.curl.dev/usingcurl/returns#available-exit-codes")
+        end
+
+        parsed_responses = validate_response_match(response, %r{<font color="red">(.*?)</font>}m)
+        result = parsed_responses[0]
+
+        # Dev server installation output will display 'Success' if app is packaged successfully
+        unless result.include?("Success")
+          UI.shell_error!("Error from Roku: #{result}")
+        end
+      end
+
+
       # A helper method to check if all the necessary parameters are set
       # params: An array containing all the parameters to check
       # keys: An array of keys to use in params
